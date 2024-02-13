@@ -5,7 +5,10 @@ title: "Module1"
 permalink: /module1
 
 ## Module 1:
-[![Link to Demo](IMG_5481.png)](https://youtu.be/vUEu3yvQ8Dk "ESP Demo")
+<a href="https://youtu.be/vUEu3yvQ8Dk">
+    <img src="IMG_5481.png" alt="Link to Demo" width="400" height="350">
+</a>
+
 
 
 As a senior, I have found myself repeatedly grappling with the relentless passage of time and the looming pressure to accomplish "big things". This project serves as a reflection of that experience, capturing the anxieties and uncertainties inherent in the pursuit of academic and creative endeavors.
