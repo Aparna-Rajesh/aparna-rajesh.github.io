@@ -6,7 +6,7 @@ permalink: /module1
 
 ## Module 1:
 <a href="https://youtu.be/vUEu3yvQ8Dk">
-    <img src="IMG_5481.png" alt="Link to Demo" width="400" height="350">
+    <img src="IMG_5481.png" alt="Link to Demo" width="200" height="150">
 </a>
 
 
