@@ -7,7 +7,7 @@ permalink: /module1 -->
 ## Module 1:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vUEu3yvQ8Dk?si=DUx3UC6W2MGvBl1N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
+jdfak
 As a senior, I have found myself repeatedly grappling with the relentless of the passage of time and the looming pressure to accomplish "big things". This project serves as a reflection of that experience, capturing the anxieties and uncertainties inherent in the pursuit of academic and creative endeavors.
 
 ### Specialization for the Space
