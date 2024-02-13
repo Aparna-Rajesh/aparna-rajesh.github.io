@@ -1,3 +1,7 @@
+layout: page
+title: "Module1"
+permalink: /Module-1
+
 ## Module 1:
 [![Link to Demo](IMG_5481.png)](https://youtu.be/vUEu3yvQ8Dk "ESP Demo")
 
