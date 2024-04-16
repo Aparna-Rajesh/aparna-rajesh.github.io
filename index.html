@@ -10,7 +10,6 @@
     <h2 class="collapsible" id="collapsible-pink">Module 1</h2>
     <div class="content">
         <div class="heading1">Demonstration & Installation</div>
-        <!-- <h1>Module 1:</h1> -->
         <p><iframe width="560" height="315" src="https://www.youtube.com/embed/vUEu3yvQ8Dk?si=DUx3UC6W2MGvBl1N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
         <p><iframe width="560" height="315" src="https://www.youtube.com/embed/-QTiDZOsdoQ?si=seHdo7GK0vEvu97L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 
@@ -94,21 +93,43 @@
             </ul>
         </p>
     </div>
+
+    <h2 class="collapsible" id="collapsible-yellow">Module 2</h2>
+    <div class="content">
+        <div class="heading1">The Final Product</div>
+        <h3>High-level description</h3>
+        <p>How is it generative art?</p>
+
+        <h3>Creative Decisions</h3>
+        <p>What creative decisions did you work lead you to, and which decisions did you take?</p>
+
+        <h3>High-level description</h3>
+        <p>Text.</p>
+
+        <h3>Technical Issues Encountered</h3>
+        <p>Text.</p>
+
+        <div class="heading1">README</div>
+
+    </div>
 </body>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var coll = document.querySelector(".collapsible");
-        var content = document.querySelector(".content");
-        
+    var collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach(function(coll) {
+        var content = coll.nextElementSibling; // This assumes that the content is always the next sibling element
         coll.addEventListener("click", function() {
-            if (content.style.display === "none") {
-                content.style.display = "block";
-            } else {
+            // Toggle visibility
+            if (content.style.display === "block") {
                 content.style.display = "none";
+            } else {
+                content.style.display = "block";
             }
         });
     });
+});
+
 </script>
 
 </html>
