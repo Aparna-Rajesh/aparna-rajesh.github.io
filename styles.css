@@ -1,0 +1,45 @@
+/* styles.css */
+body, html {
+    min-height: 100%;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* prevent horizontal scrolling */
+}
+
+.collapsible {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    text-decoration: underline;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    transition: 0.4s;
+}
+
+#collapsible-pink {
+    background-color: #e6bec7;
+}
+
+
+.content {
+    padding: 0 20px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+}
+
+.heading1 {
+    color: #381019;
+    font-size: 25px;   
+    font-style: italic;
+    font-weight: bold;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative; /* ensure it's above the parallax background */
+    z-index: 10; /* Higher z-index */
+}
