@@ -47,7 +47,7 @@
             <li>Install the ESP32 board support package in the Arduino IDE. Follow the instructions <a href="https://youtu.be/adLUgmCJKnM">here</a>.</li>
             <li>Install the TFT_eSPI library by Bodmer. Go to Sketch > Include Library > Manage Libraries..., search for "TFT_eSPI" and install it.</li>
             <li>Connect your ESP32 board to your computer via USB.</li>
-            <li>Open <a href="https://github.com/Aparna-Rajesh/CES-Module1/blob/main/mod1_01.ino">the code</a> provided in the Arduino IDE.</li>
+            <li>Open <a href="https://github.com/Aparna-Rajesh/CES-Modules/blob/main/Module%201/mod1_01.ino">the code</a> provided in the Arduino IDE.</li>
             <li>Upload the code to your ESP32 board.</li>
         </ol>
         <p>After uploading the code, the generative art display will start running immediately. The display alternates between soothing messages, displayed in random colors, and anxiety-inducing phrases, displayed in black and white towards the bottom right corner of the screen.</p>
@@ -97,20 +97,122 @@
     <h2 class="collapsible" id="collapsible-yellow">Module 2</h2>
     <div class="content">
         <div class="heading1">The Final Product</div>
+        <br>
+        <video width="170" height="300" controls>
+            <source src="mod2_media/IMG_1288.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="270" height="300" controls>
+            <source src="mod2_media/IMG_1291.mov" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <video width="180" height="300" controls>
+            <source src="mod2_media/IMG_1319.mov" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+
         <h3>High-level description</h3>
-        <p>How is it generative art?</p>
+        This interactive installation features an ESP32 TTGO T-display, which acts as the brain of the operation, connected to a pushbutton, a joystick, and a potentiometer. 
+        These components are housed in a cardboard enclosure and are powered by a wired connection, ensuring continuous operation without the need for batteries. 
+        The button, joystick, and potentiometer allow users to interact with the device, with each input influencing the visual output displayed on a laptop. 
+        The ESP32 reads the state of these inputs and sends the data over a WiFi connection to a laptop, where custom software visualizes this data by dynamically 
+        generating a lava lamp display on the screen. <br> <br>
+        
+        From a technical standpoint, I developed an ESP32 program that continuously collects sensor data from the hardware inputs. 
+        This data is then packaged and transmitted via a WiFi connection to the laptop. On the software side, a Python script running on the laptop uses this data to adjust the colors, 
+        patterns, and animation speed of the lava lamp visualization in real-time, creating an engaging multimedia experience. 
+        The integration of hardware and software allows for an interactive installation that responds immediately to user interactions, 
+        offering a blend of technology and art. <br> <br>
+        
+        The installation creates visual outputs that are not manually pre-determined but instead are dynamically generated based on real-time interactions with the viewer. 
+        Each interaction—-adjusting the potentiometer, moving the joystick, or pressing the button—-alters the algorithmic behavior that governs the visualization of the lava lamp, 
+        resulting in unique and ever-changing artistic patterns. This method ensures that the art displayed is constantly evolving, reflecting the immediate input from its viewers. 
+        The unpredictability and variability of the output, driven by the algorithm's response to human interaction, embody the core principles of generative art, 
+        making the installation not just a piece of technology but a living artwork that creates new experiences with each interaction.
 
         <h3>Creative Decisions</h3>
-        <p>What creative decisions did you work lead you to, and which decisions did you take?</p>
-
-        <h3>High-level description</h3>
-        <p>Text.</p>
-
-        <h3>Technical Issues Encountered</h3>
-        <p>Text.</p>
+        <p>the choice of colors plays a significant role in the visual and interactive experience. 
+            The palette includes vibrant and diverse hues—deep blues and purples for a touch of mystery, bright yellows and reds to evoke warmth and energy, and calming greens and cyans. 
+            These colors shift and blend dynamically in response to user interactions through the joystick and potentiometer, allowing participants to directly influence the visual display. 
+            This setup not only makes the installation visually appealing but also engages users by giving them control over the color transformations, enhancing the interactivity of the piece. 
+            The use of such a colorful array underscores the playful and engaging nature of the installation, inviting users to explore the impact of their actions on the evolving art piece.
+        </p>
 
         <div class="heading1">README</div>
+        <h3>ESP Setup</h3>
+        <img src="mod2_media/finalwiring.png" 
+            width="300" 
+            height=auto />
+        <ol>
+            <li>Start by placing the ESP on your breadboard, ensuring that the header pins are already soldered to it.</li>
+            <li>Connect a 3V pin from the ESP to one of the positive (+) strips on your breadboard.</li>
+            <li>Similarly, connect a Ground (GND) pin from the ESP to one of the negative (-) strips on your breadboard.</li>
+            <li>Insert your potentiometer into the breadboard.</li>
+            <li>Connect the left pin of the potentiometer to the negative (-) strip, the middle pin to pin 36 on the ESP, and the right pin to the positive (+) strip.</li>
+            <li>Place your pushbutton on the breadboard.</li>
+            <li>Connect one of the pushbutton's top pins (either left or right) to the positive (+) strip and one of the bottom pins to pin 15 on the ESP.</li>
+            <li>Insert your joystick into the breadboard.</li>
+            <li>For the joystick wiring, connect the left-most pin to the negative (-) strip, the second pin from the left to the positive (+) strip, the VRX pin to pin 33 on the ESP, the VRY pin to pin 39 on the ESP, and the SW pin to pin 38 on the ESP.</li>
+            <li>Finally, plug your ESP to your computer, upload <a href="https://github.com/Aparna-Rajesh/CES-Modules/blob/main/Module%201/mod1_01.ino">the provided code</a> to the microcontroller, and once it is running, execute <a href="https://github.com/Aparna-Rajesh/CES-Modules/blob/main/Module%201/mod1_01.ino">this</a> code on your laptop.</li>
+        </ol>
 
+        <h3>Enclosure</h3>
+        <ol>
+            <li>Begin with a cardboard box.</li>
+            <img src="mod2_media/step1.png" 
+            width="300" 
+            height=auto />
+            <br>
+            <br>
+
+            <li>Trim the cardboard so that it leaves a small margin around the breadboard.</li>
+            <img src="mod2_media/step2.png" 
+            width="300" 
+            height=auto />
+            <br>
+            <br>
+
+            <li>Create a flap next to the potentiometer and joystick, and cut openings in the flap to allow easy access to these controls.</li>
+            <img src="mod2_media/step3_01.png" 
+            width="150" 
+            height=auto />
+            <img src="mod2_media/step3_02.png" 
+            width="150" 
+            height=auto />
+            <img src="mod2_media/step3_03.png" 
+            width="150" 
+            height=auto />
+            <br>
+            <br>
+
+            <li>Construct a frame around the breadboard using leftover cardboard pieces, and form a partial cover over most of the wires to keep them contained within the enclosure, ensuring all components remain accessible.</li>
+            <img src="mod2_media/step4.png" 
+            width="300" 
+            height=auto />
+
+        </ol>
+
+        <h3>Troubleshooting/Technical Issues Encountered</h3>
+        <ol>
+            <li><strong>Blocking:</strong> The program involves continuous network communication to receive data from the ESP32, and a GUI that displays changing visual data based on the received inputs. Both processes are continuous and potentially long-running, 
+                so running these tasks on the main thread would block the GUI, making it unresponsive, or hinder timely data processing from the network because Python's tkinter module is not inherently designed to handle intensive computational tasks or blocking operations within its main event loop.
+                <br><strong>Solution:</strong> I started using threads. The udp_communication function, which handles continuous network communication, is now in a separate thread to ensure it runs independently of the GUI. This prevents the blocking network operations from interfering with the GUI responsiveness.
+                Meanwhile, the main thread is dedicated to updating the lava lamp. 
+            </li> <br>
+
+            <li><strong>Joystick pins:</strong> While testing the joystick alone, I could use pins 26, 25, and 33 to transmit data. But when I tested the joystick with code that involved the display, potentiometer, pushbutton, and the UDP connection, it would always read 0 for the x and y components of the joystick readings. 
+                <br><strong>Solution:</strong> Change the pins. I started using pins 33 and 32 for the X and Y values.</li> <br>
+            
+            <li><strong>Ground and Power:</strong> When different components (joystick and potentiometer) were connected to different ground lines and different voltage supplies (5V for the joystick and 3.3V for the potentiometer) on the same ESP32, using the joystick affected the potentiometer's output. 
+                This could have been the result of ground loops and voltage offsets that were the product of the disparate ground connections and voltage levels.
+                <br><strong>Solution:</strong> Connect all the components to a common ground. This setup helps eliminate ground loop issues and ensures a uniform reference point for all voltage levels across the circuit, thereby stabilizing the sensor readings and preventing interference between components operating at different voltage levels.
+            </li> <br>
+        </ol>
+        <div class="heading1">References</div>
+        <ol>
+            <li> Lava lamp <a href="https://github.com/dafarry/python-lava-lamp-effect/blob/main/python-lavalamp-create-vid.py">starter code</a></li>
+            <li> Pushbutton <a href="https://diotlabs.daraghbyrne.me/docs/getting-inputs/buttons/">wiring</a></li>
+        </ol>
     </div>
 </body>
 
